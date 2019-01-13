@@ -41,7 +41,7 @@ public class UserControllerTest {
 
         mockMvc.perform(post("/users/create")
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
-                .accept(MediaType.APPLICATION_XML)
+                .accept(MediaType.APPLICATION_JSON_UTF8)
                 .content(mapper.writeValueAsString(user)))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.userName",
